@@ -1,0 +1,27 @@
+{
+  "branches": ["master"],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          { "path":  "../../namer.darwin_amd64", "label":  "Namer mfor MacOS X (x64)"},
+          { "path":  "../../namer.linux_amd64", "label":  "Namer for Linux (x64)"},
+          { "path":  "../../namer.windows_amd64.exe", "label":  "Namer for Windows (x64)"}
+        ]
+      }
+    ]
+  ]
+}
